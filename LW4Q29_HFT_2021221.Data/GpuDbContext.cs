@@ -8,16 +8,19 @@ using LW4Q29_HFT_2021221.Models;
 
 namespace LW4Q29_HFT_2021221.Data
 {
-    class GpuDbContext:DbContext
+    public class GpuDbContext:DbContext
     {
+        public virtual DbSet<GraphicCards> graphiccards { get; set; }
         public virtual DbSet<Nvidia> nvidias { get; set; }
         public virtual DbSet<Amd> amds { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            var rtx = new GraphicCards(){ GpuId = 1};
-            var gtx = new GraphicCards(){ GpuId = 2};
-            var r_series = new GraphicCards(){ GpuId = 4};
-            var rx_series = new GraphicCards(){ GpuId = 5};
+            var context = 30;
+            var rtx = new GraphicCards(){ GpuId = 1, Usability = "Desginer"};
+            var gtx = new GraphicCards(){ GpuId = 2,Usability = "Gamer" };
+            var r_series = new GraphicCards(){ GpuId = 4, Usability ="Gamer"};
+            var rx_series = new GraphicCards(){ GpuId = 5, Usability = "Desginer" };
 
             builder.Entity<Nvidia>()
                 .HasOne(gpu => gpu.graphic_card)

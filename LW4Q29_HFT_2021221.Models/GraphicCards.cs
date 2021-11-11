@@ -13,6 +13,8 @@ namespace LW4Q29_HFT_2021221.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int GpuId { get; set; }
+        public string Usability { get; set; }
+        
 
         public virtual ICollection<Nvidia> Nvidias { get; set; }
         public virtual ICollection<Amd> Amds { get; set; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LW4Q29_HFT_2021221.Models
 {
-   public class Amd
+   public class Amd: GraphicCards
    {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LW4Q29_HFT_2021221.Models
 {
-    public class Nvidia
+    public class Nvidia:GraphicCards
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
