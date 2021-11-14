@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LW4Q29_HFT_2021221.Repository
 {
-    class AmdRepository : IAmdRepository
+    public class AmdRepository : IAmdRepository
     {
         GpuDbContext db;
         public AmdRepository(GpuDbContext db)

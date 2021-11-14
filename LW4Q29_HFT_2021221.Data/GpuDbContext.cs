@@ -16,7 +16,7 @@ namespace LW4Q29_HFT_2021221.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            var context = 30;
+            
             var rtx = new GraphicCards(){ GpuId = 1, Usability = "Desginer"};
             var gtx = new GraphicCards(){ GpuId = 2,Usability = "Gamer" };
             var r_series = new GraphicCards(){ GpuId = 4, Usability ="Gamer"};

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LW4Q29_HFT_2021221.Repository
 {
-    class GpuRepository : IGpuRepository
+    public class GpuRepository : IGpuRepository
     {
         GpuDbContext db;
         public GpuRepository(GpuDbContext db)
