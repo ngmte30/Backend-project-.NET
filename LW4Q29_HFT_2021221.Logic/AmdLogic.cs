@@ -30,5 +30,9 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             throw new NotImplementedException();
         }
+        public Amd GetAmdGeneration(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

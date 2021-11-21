@@ -32,5 +32,9 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             throw new NotImplementedException();
         }
+        public GraphicCards GetGpuGeneration(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
