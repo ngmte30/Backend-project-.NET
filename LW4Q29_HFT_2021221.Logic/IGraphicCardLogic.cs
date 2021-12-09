@@ -11,9 +11,9 @@ namespace LW4Q29_HFT_2021221.Logic
 {
     public interface IGraphicCardLogic
     {
-        GraphicCards GetGpuById(int id);
+        GraphicCard GetGpuById(int id);
         void ChangeGpuTitle(int id, string newTitle);
-        IList<GraphicCards> GetAllGpus();
+        IList<GraphicCard> GetAllGpus();
         void Create(Amd amd);
         void Delete(int id);
         void Read();

@@ -9,10 +9,10 @@ namespace LW4Q29_HFT_2021221.Repository
 {
     public interface IGpuRepository
     {
-        void Create(GraphicCards gpu);
+        void Create(GraphicCard gpu);
         void Delete(int id);
-        IQueryable<GraphicCards> GetAll();
-        GraphicCards Read(int id);
-        void Update(GraphicCards car);
+        IQueryable<GraphicCard> GetAll();
+        GraphicCard Read(int id);
+        void Update(GraphicCard car);
     }
 }

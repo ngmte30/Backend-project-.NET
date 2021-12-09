@@ -1,3 +1,6 @@
+using LW4Q29_HFT_2021221.Data;
+using LW4Q29_HFT_2021221.Logic;
+using LW4Q29_HFT_2021221.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +20,15 @@ namespace LW4Q29_HFT_2021221.Endpoint
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddTransient<IAmdLogic, AmdLogic>();
+            services.AddTransient<INvidiaLogic, NvidiaLogic>();
+            services.AddTransient<IGraphicCardLogic, GraphicCardLogic>();
+
+            services.AddTransient<ISeriesRepository, SeriesRepository>();
+            services.AddTransient<IGenerationRepository, GenerationRepository>();
+            services.AddTransient<IGpuRepository, GpuRepository>();
+
+            services.AddTransient<GpuDbContext, GpuDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

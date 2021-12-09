@@ -33,16 +33,16 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public IList<GraphicCards> GetAllGpus()
+        public IList<GraphicCard> GetAllGpus()
         {
-            throw new NotImplementedException();
+            return null;
         }
 
-        public GraphicCards GetGpuById(int id)
+        public GraphicCard GetGpuById(int id)
         {
             throw new NotImplementedException();
         }
-        public GraphicCards GetGpuGeneration(int id)
+        public GraphicCard GetGpuGeneration(int id)
         {
             throw new NotImplementedException();
         }

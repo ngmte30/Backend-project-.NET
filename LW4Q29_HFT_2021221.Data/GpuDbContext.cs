@@ -10,45 +10,55 @@ namespace LW4Q29_HFT_2021221.Data
 {
     public class GpuDbContext:DbContext
     {
-        public virtual DbSet<GraphicCards> graphiccards { get; set; }
-        public virtual DbSet<Nvidia> nvidias { get; set; }
-        public virtual DbSet<Amd> amds { get; set; }
+        public virtual DbSet<GraphicCard> graphiccards { get; set; }
+        public virtual DbSet<Series> serieses { get; set; }
+        public virtual DbSet<Generation> generations { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder builder)
+        {
+            builder.UseLazyLoadingProxies().UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data.mdf;Integrated Security=True");
+        }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            
-            var rtx = new GraphicCards(){ GpuId = 1, Usability = "Desginer"};
-            var gtx = new GraphicCards(){ GpuId = 2,Usability = "Gamer" };
-            var r_series = new GraphicCards(){ GpuId = 4, Usability ="Gamer"};
-            var rx_series = new GraphicCards(){ GpuId = 5, Usability = "Desginer" };
 
-            builder.Entity<Nvidia>()
-                .HasOne(gpu => gpu.graphic_card)
-                .WithMany(nv => nv.Nvidias)
-                .HasForeignKey(gpu => gpu.nvidia_cardId);
-            builder.Entity<Amd>()
-                .HasOne(gpu=>gpu.graphic_card)
-                .WithMany(amd => amd.Amds)
-                .HasForeignKey(gpu => gpu.amd_cardId);
+            var amd = new GraphicCard() { Id = 1, Name = "AMD", Employees = 792 };
+            var nvidia = new GraphicCard() { Id = 2, Name = "Nvidia", Employees = 828 };
 
-            builder.Entity<GraphicCards>().HasData(rtx, gtx, r_series, r_series, rx_series);
+            builder
+                .Entity<Series>()
+                .HasOne(sr => sr.GraphicCards)
+                .WithMany(srt => srt.Serieses )
+                .HasForeignKey(sr => sr.GraphicCardID);
 
-            var nvidia_list = new List<Nvidia>
+            builder
+                .Entity<Generation>()
+                .HasOne(st => st.Series)
+                .WithMany(sh => sh.Generations)
+                .HasForeignKey(st => st.SeriesID);
+
+
+
+            var Serieses = new List<Series>()
             {
-                new Nvidia(){nvidia_cardId = 1,Brand = "Zotac",Generation = 3090,GpuId = rtx.GpuId=1,Price = 1000000},
-                new Nvidia(){nvidia_cardId = 2,Brand = "Asus",Generation = 2080,GpuId = gtx.GpuId=2,Price = 400000},
-                new Nvidia(){nvidia_cardId = 3,Brand = "MSI",Generation = 1070,GpuId = gtx.GpuId=2,Price = 150000},
-               
+
+               new Series{Id=11,isMiner=true,Name="Rtx",GraphicCardID=1},
+               new Series{Id=12,isMiner=false,Name="Gtx",GraphicCardID=1},
+               new Series{Id=21,isMiner=false,Name="R",GraphicCardID =2},
+               new Series{Id=22,isMiner=true,Name="RX",GraphicCardID =2},
                 
             };
-            var amd_list = new List<Amd>
+            var Generations = new List<Generation>
             {
-                new Amd(){amd_cardId= 4,Brand = "Gainward",Generation = 390 ,GpuId = r_series.GpuId=4,Price = 120000},
-                new Amd(){amd_cardId = 5,Brand = "Asus",Generation = 6800 ,GpuId = rx_series.GpuId=5,Price = 350000},
-                new Amd(){amd_cardId = 6,Brand = "Sapphire",Generation = 6900 ,GpuId = rx_series.GpuId=5,Price = 410000}
+                new Generation{Id = 01,Name="RTX 3090",LHR = false,Price = 990000,MemoryType="Samsung",SeriesID=11},
+                new Generation{Id = 02,Name="RTX 3080",LHR = true,Price = 650000,MemoryType="Hynix",SeriesID=11},
+                new Generation{Id = 03,Name="RTX 1660",LHR = false,Price = 250000,MemoryType="Samsung",SeriesID=11},
+                new Generation{Id = 04,Name="GTX 1070",LHR = false,Price = 150000,MemoryType="Samsung",SeriesID=12},
+                new Generation{Id = 05,Name="Radeon 390",LHR = false,Price = 230000,MemoryType="Hynix",SeriesID=21},
+                new Generation{Id = 06,Name="RX 6900",LHR = false,Price = 990000,MemoryType="Samsung",SeriesID=22}
             };
-            builder.Entity<Nvidia>().HasData(nvidias);
-            builder.Entity<Amd>().HasData(amds);
+            builder.Entity<GraphicCard>().HasData(amd,nvidia);
+            builder.Entity<Series>().HasData(serieses);
+            builder.Entity<Generation>().HasData(Generations);
         }
     }
 }

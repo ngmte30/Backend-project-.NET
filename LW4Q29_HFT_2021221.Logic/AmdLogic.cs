@@ -10,9 +10,9 @@ namespace LW4Q29_HFT_2021221.Logic
 {
     public class AmdLogic : IAmdLogic
     {
-        IAmdRepository amdRepo;
+        ISeriesRepository amdRepo;
 
-        public AmdLogic(IAmdRepository repo)
+        public AmdLogic(ISeriesRepository repo)
         {
             this.amdRepo = repo;
         }
@@ -21,9 +21,9 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public IList<Amd> GetAllAmd()
+        public IEnumerable<Amd> GetAllAmd()
         {
-            throw new NotImplementedException();
+            return amdRepo.GetAll();
         }
 
         public Amd GetAmdId(int id)
@@ -68,25 +68,25 @@ namespace LW4Q29_HFT_2021221.Logic
                        GpuAvgPrice = h.Average(z => z.Price)
                    };
         }
-        public IEnumerable<KeyValuePair<string, double>> BrandAvgPrice()
-        {
-            //return from x in amdRepo.GetAll()
-            //       group x by x.Amds into h
-            //       select new KeyValuePair<string, double>
-            //       (h.Average(t => t.Price));
-            return null;
-        }
-        public IEnumerable<Amd> DesignerCard()
-        {
-            return null;
-            //return from x in amdRepo.GetAll()
-            //       where x.Usability == "Designer"
-            //       select new
-            //       {
+        //public IEnumerable<KeyValuePair<string, double>> BrandAvgPrice()
+        //{
+        //    return from x in amdRepo.GetAll()
+        //           group x by x.aminto h
+        //           select new KeyValuePair<string, double>
+        //           (h.Key.,h.Average(t => t.Price));
+        //    return null;
+        
+        //public IEnumerable<Amd> DesignerCard()
+        //{
+        //    return null;
+        //    //return from x in amdRepo.GetAll()
+        //    //       where x.Usability == "Designer"
+        //    //       select new
+        //    //       {
                        
 
-            //       };
+        //    //       };
                  
-        }
+        //}
     }
 }

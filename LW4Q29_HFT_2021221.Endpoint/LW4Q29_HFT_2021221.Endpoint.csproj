@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <StartupObject>LW4Q29_HFT_2021221.Endpoint.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <Folder Include="Controllers\"/>
     <ProjectReference Include="..\LW4Q29_HFT_2021221.Data\LW4Q29_HFT_2021221.Data.csproj" />
     <ProjectReference Include="..\LW4Q29_HFT_2021221.Logic\LW4Q29_HFT_2021221.Logic.csproj" />
     <ProjectReference Include="..\LW4Q29_HFT_2021221.Models\LW4Q29_HFT_2021221.Models.csproj" />

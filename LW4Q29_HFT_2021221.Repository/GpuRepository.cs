@@ -15,7 +15,7 @@ namespace LW4Q29_HFT_2021221.Repository
         {
             this.db = db;
         }
-        public void Create(GraphicCards gpu)
+        public void Create(GraphicCard gpu)
         {
             db.graphiccards.Add(gpu);
             db.SaveChanges();
@@ -28,20 +28,22 @@ namespace LW4Q29_HFT_2021221.Repository
             db.SaveChanges();
         }
 
-        public IQueryable<GraphicCards> GetAll()
+        public IQueryable<GraphicCard> GetAll()
         {
            return db.graphiccards;
         }
 
-        public GraphicCards Read(int id)
+        public GraphicCard Read(int id)
         {
-            return db.graphiccards.FirstOrDefault(t => t.GpuId == id);
+            return db.graphiccards.FirstOrDefault(t => t.Id == id);
         }
 
-        public void Update(GraphicCards gpu)
+        public void Update(GraphicCard gpu)
         {
-            var gpuToUpdate = Read(gpu.GpuId);
-            gpuToUpdate.Usability = gpu.Usability;
+            var gpuToUpdate = Read(gpu.Id);
+            gpuToUpdate.Name = gpu.Name;
+            gpuToUpdate.Serieses = gpu.Serieses;
+            gpuToUpdate.Employees = gpu.Employees;
             db.SaveChanges();
         }
     }
