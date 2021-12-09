@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using LW4Q29_HFT_2021221.Logic;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace LW4Q29_HFT_2021221.Test
         [SetUp]
         public void Setup()
         {
-
+           //GenerationLogic g = new GenerationLogic();
         }
         [TestCase]
         public void TestMethod1()
@@ -40,25 +41,6 @@ namespace LW4Q29_HFT_2021221.Test
         {
 
         }
-        [TestCase]
-        public void TestMethod6()
-        {
-
-        }
-        [TestCase]
-        public void TestMethod7()
-        {
-
-        }
-        [TestCase]
-        public void TestMethod8()
-        {
-
-        }
-        [TestCase]
-        public void TestMethod9()
-        {
-
-        }
+       
     }
 }

@@ -17,7 +17,17 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             this.gpuRepo = repo;
         }
-        
+
+        public IEnumerable<GraphicCard> AmdCards()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<GraphicCard> AmdEmployees()
+        {
+            throw new NotImplementedException();
+        }
+
         public void ChangeGpuTitle(int id, string newTitle)
         {
 
@@ -47,6 +57,21 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
+        public IEnumerable<GraphicCard> HighestCards()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<GraphicCard> NvidiaCards()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<GraphicCard> NvidiaeEmployees()
+        {
+            throw new NotImplementedException();
+        }
+
         public GraphicCard Read(int id)
         {
             return gpuRepo.Read(id);
@@ -61,5 +86,6 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             gpuRepo.Update(gpu);
         }
+        
     }
 }

@@ -54,27 +54,27 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
             sLogic.Delete(id);
         }
         [HttpGet("{id}")]
-        public void isMiner(int id)
+        public void isMiner()
         {
             sLogic.MinerCounter();
         }
         [HttpGet("{id}")]
-        public void notMiner(int id)
+        public void notMiner()
         {
             sLogic.NonMinerCounter();
         }
         [HttpGet("{id}")]
-        public void Five(int id)
+        public void Five()
         {
             sLogic.NameLongerThanFive();
         }
         [HttpGet("{id}")]
-        public void LessFive(int id)
+        public void LessFive()
         {
             sLogic.NameLessThanFive();
         }
         [HttpGet("{id}")]
-        public void TopSeries(int id)
+        public void TopSeries()
         {
             sLogic.TopSeries();
         }

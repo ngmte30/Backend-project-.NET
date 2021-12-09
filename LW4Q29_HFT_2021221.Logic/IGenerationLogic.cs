@@ -19,6 +19,14 @@ namespace LW4Q29_HFT_2021221.Logic
         void Delete(int id);
         Generation Read(int id);
         void Update(Generation gen);
+
+        IEnumerable<Generation> AvgPrice();
+        IEnumerable<Generation> CheapestLHR();
+        IEnumerable<Generation> SamsungMemory();
+        IEnumerable<Generation> HynixAndLhr();
+        IEnumerable<Generation> CheapestSamsungRam();
+
+
        
     }
 }
