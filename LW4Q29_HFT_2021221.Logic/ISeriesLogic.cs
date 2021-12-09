@@ -11,6 +11,10 @@ namespace LW4Q29_HFT_2021221.Logic
     {
         Series GetNvidiaById(int id);
         IEnumerable<Series> MinerCounter();
+        IEnumerable<Series> NonMinerCounter();
+        IEnumerable<Series> NameLongerThanFive();
+        IEnumerable<Series> NameLessThanFive();
+        IEnumerable<Series> TopSeries();
         IQueryable<Series> GetAll();
 
         void Create(Series sr);
