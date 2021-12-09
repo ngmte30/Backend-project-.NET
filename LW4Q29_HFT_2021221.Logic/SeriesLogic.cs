@@ -44,9 +44,10 @@ namespace LW4Q29_HFT_2021221.Logic
 
         public IEnumerable<Series> MinerCounter()
         {
-            
+            return from Series x in serRepo.GetAll()
+                   where x.isMiner == true
+                   select x;
         }
-
         public Series Read(int id)
         {
             return serRepo.Read(id);
