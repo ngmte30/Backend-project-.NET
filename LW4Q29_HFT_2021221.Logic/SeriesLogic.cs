@@ -45,9 +45,9 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public void Read(int id)
+        public Series Read(int id)
         {
-            serRepo.Read(id);
+            return serRepo.Read(id);
         }
 
         public void Update(Series ser)

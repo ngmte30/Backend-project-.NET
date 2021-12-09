@@ -15,7 +15,7 @@ namespace LW4Q29_HFT_2021221.Logic
 
         void Create(Series sr);
         void Delete(int sr);
-        void Read(int id);
+        Series Read(int id);
         void Update(Series sr);
     }
 }

@@ -17,8 +17,8 @@ namespace LW4Q29_HFT_2021221.Logic
 
         void Create(Generation amd);
         void Delete(int id);
-        void Read(int id);
-        void Update(int id);
+        Generation Read(int id);
+        void Update(Generation gen);
        
     }
 }

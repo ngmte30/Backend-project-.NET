@@ -48,9 +48,9 @@ namespace LW4Q29_HFT_2021221.Logic
             genRepo.Delete(id);
         }
 
-        public void Read(int id)
+        public Generation Read(int id)
         {
-            genRepo.Read(id);
+            return genRepo.Read(id);
         }
 
         public void Update(Generation gen)

@@ -47,9 +47,9 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public void Read(int id)
+        public GraphicCard Read(int id)
         {
-            gpuRepo.Read(id);
+            return gpuRepo.Read(id);
         }
 
         public void ReadAll()

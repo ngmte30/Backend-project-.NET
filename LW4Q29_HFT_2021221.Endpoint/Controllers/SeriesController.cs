@@ -28,9 +28,9 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
 
         // GET api/<SeriesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Series Get(int id)
         {
-            return "value";
+            return sLogic.Read(id);
         }
 
         // POST api/<SeriesController>

@@ -28,27 +28,30 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
 
         // GET api/<GenerationController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Generation Get(int id)
         {
-            return "value";
+            return gLogic.Read(id);
         }
 
         // POST api/<GenerationController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Generation value)
         {
+            gLogic.Create(value);
         }
 
         // PUT api/<GenerationController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Generation value)
         {
+            gLogic.Update(value);
         }
 
         // DELETE api/<GenerationController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            gLogic.Delete(id);
         }
     }
 }

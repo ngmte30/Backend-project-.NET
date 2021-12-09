@@ -27,9 +27,9 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
         }
         // GET api/<AmdController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public GraphicCard Get(int id)
         {
-            return "value";
+            return gLogic.Read(id);
         }
 
         // POST api/<AmdController>

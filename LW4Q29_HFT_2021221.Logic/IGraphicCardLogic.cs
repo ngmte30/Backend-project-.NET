@@ -16,7 +16,7 @@ namespace LW4Q29_HFT_2021221.Logic
         IQueryable<GraphicCard> GetAllGpus();
         void Create(GraphicCard gpu);
         void Delete(int id);
-        void Read(int id);
+        GraphicCard Read(int id);
         void Update(GraphicCard gpu);
         void ReadAll();
 
