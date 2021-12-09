@@ -10,9 +10,13 @@ namespace LW4Q29_HFT_2021221.Data
 {
     public class GpuDbContext:DbContext
     {
-        public virtual DbSet<GraphicCard> graphiccards { get; set; }
-        public virtual DbSet<Series> serieses { get; set; }
-        public virtual DbSet<Generation> generations { get; set; }
+        public virtual DbSet<GraphicCard> GraphicCards { get; set; }
+        public virtual DbSet<Series> Serieses { get; set; }
+        public virtual DbSet<Generation> Generations { get; set; }
+        public GpuDbContext()
+        {
+            this.Database.EnsureCreated();
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
@@ -57,7 +61,7 @@ namespace LW4Q29_HFT_2021221.Data
                 new Generation{Id = 06,Name="RX 6900",LHR = false,Price = 990000,MemoryType="Samsung",SeriesID=22}
             };
             builder.Entity<GraphicCard>().HasData(amd,nvidia);
-            builder.Entity<Series>().HasData(serieses);
+            builder.Entity<Series>().HasData(Serieses);
             builder.Entity<Generation>().HasData(Generations);
         }
     }

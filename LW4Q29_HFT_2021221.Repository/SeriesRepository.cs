@@ -24,18 +24,18 @@ namespace LW4Q29_HFT_2021221.Repository
         public void Delete(int id)
         {
             var seriesToDelete = Read(id);
-            db.serieses.Remove(seriesToDelete);
+            db.Serieses.Remove(seriesToDelete);
             db.SaveChanges();
         }
 
         public IQueryable<Series> GetAll()
         {
-            return db.serieses;
+            return db.Serieses;
         }
 
         public Series Read(int id)
         {
-            return db.serieses.FirstOrDefault(t => t.Id == id);
+            return db.Serieses.FirstOrDefault(t => t.Id == id);
         }
 
         public void Update(Series series)

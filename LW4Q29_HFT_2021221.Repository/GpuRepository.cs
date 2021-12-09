@@ -17,25 +17,25 @@ namespace LW4Q29_HFT_2021221.Repository
         }
         public void Create(GraphicCard gpu)
         {
-            db.graphiccards.Add(gpu);
+            db.GraphicCards.Add(gpu);
             db.SaveChanges();
         }
 
         public void Delete(int id)
         {
             var gpuToDelete = Read(id);
-            db.graphiccards.Remove(gpuToDelete);
+            db.GraphicCards.Remove(gpuToDelete);
             db.SaveChanges();
         }
 
         public IQueryable<GraphicCard> GetAll()
         {
-           return db.graphiccards;
+           return db.GraphicCards;
         }
 
         public GraphicCard Read(int id)
         {
-            return db.graphiccards.FirstOrDefault(t => t.Id == id);
+            return db.GraphicCards.FirstOrDefault(t => t.Id == id);
         }
 
         public void Update(GraphicCard gpu)

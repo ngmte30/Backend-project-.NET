@@ -12,10 +12,10 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class AmdController : ControllerBase
+    public class GpuController : ControllerBase
     {
         IGraphicCardLogic gLogic;
-        public AmdController(IGraphicCardLogic gLogic)
+        public GpuController(IGraphicCardLogic gLogic)
         {
             this.gLogic = gLogic;
         }

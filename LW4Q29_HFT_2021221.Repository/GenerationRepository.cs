@@ -31,12 +31,12 @@ namespace LW4Q29_HFT_2021221.Repository
 
         public IQueryable<Generation> GetAll()
         {
-            return db.generations;
+            return db.Generations;
         }
 
         public Generation Read(int id)
         {
-            return db.generations.FirstOrDefault(t => t.Id == id);
+            return db.Generations.FirstOrDefault(t => t.Id == id);
         }
 
         public void Update(Generation newGen)

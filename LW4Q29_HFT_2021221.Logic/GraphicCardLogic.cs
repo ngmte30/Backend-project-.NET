@@ -33,9 +33,9 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public IList<GraphicCard> GetAllGpus()
+        public IQueryable<GraphicCard> GetAllGpus()
         {
-            return null;
+            return gpuRepo.GetAll();
         }
 
         public GraphicCard GetGpuById(int id)
