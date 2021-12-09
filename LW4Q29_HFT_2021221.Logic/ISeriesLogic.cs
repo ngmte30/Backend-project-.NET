@@ -11,7 +11,7 @@ namespace LW4Q29_HFT_2021221.Logic
     {
         Series GetNvidiaById(int id);
         void ChangeNvidiaTitle(int id, string newTitle);
-        IList<Series> GetAll();
+        IQueryable<Series> GetAll();
 
         void Create(Series sr);
         void Delete(int id);

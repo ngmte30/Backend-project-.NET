@@ -12,39 +12,40 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class GpuController : ControllerBase
+    public class SeriesController : ControllerBase
     {
-        IGraphicCardLogic gLogic;
-        public GpuController(IGraphicCardLogic gLogic)
+        ISeriesLogic sLogic;
+        public SeriesController(ISeriesLogic sLogic)
         {
-            this.gLogic = gLogic;
+            this.sLogic = sLogic;
         }
-        // GET:/gpu
+        // GET:series
         [HttpGet]
-        public IEnumerable<GraphicCard> Get()
+        public IEnumerable<Series> Get()
         {
-            return gLogic.GetAllGpus();
+            return sLogic.GetAll();
         }
-        // GET api/<AmdController>/5
+
+        // GET api/<SeriesController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<AmdController>
+        // POST api/<SeriesController>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<AmdController>/5
+        // PUT api/<SeriesController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<AmdController>/5
+        // DELETE api/<SeriesController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

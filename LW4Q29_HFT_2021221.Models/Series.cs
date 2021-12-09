@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace LW4Q29_HFT_2021221.Models
@@ -18,6 +19,7 @@ namespace LW4Q29_HFT_2021221.Models
         [NotMapped]
         public virtual GraphicCard GraphicCards { get; set; }
         [NotMapped]
+        [JsonIgnore]
         public virtual ICollection<Generation> Generations { get; set; }
 
         public string Name { get; set; }

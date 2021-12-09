@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace LW4Q29_HFT_2021221.Models
@@ -16,6 +17,7 @@ namespace LW4Q29_HFT_2021221.Models
         [ForeignKey(nameof(Models.Series))]
         public int SeriesID { get; set; }
         [NotMapped]
+        [JsonIgnore]
         public virtual Series Series { get; set; }
 
 

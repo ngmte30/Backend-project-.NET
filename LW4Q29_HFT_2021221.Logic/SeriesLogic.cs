@@ -31,9 +31,9 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public IList<Series> GetAll()
+        public IQueryable<Series> GetAll()
         {
-            throw new NotImplementedException();
+           return serRepo.GetAll();
         }
 
         public Series GetNvidiaById(int id)
