@@ -10,7 +10,12 @@ namespace LW4Q29_HFT_2021221.Logic
     public interface ISeriesLogic
     {
         Series GetNvidiaById(int id);
-        void ChangeNvidiaTitle(int id, string newTitle);
+        IEnumerable<Series> MinerCounter();
+
+
+
+
+
         IQueryable<Series> GetAll();
 
         void Create(Series sr);

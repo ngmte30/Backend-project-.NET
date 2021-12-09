@@ -16,10 +16,7 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             this.serRepo = repo;
         }
-        public void ChangeNvidiaTitle(int id, string newTitle)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public void Create(Series ser)
         {
@@ -43,6 +40,11 @@ namespace LW4Q29_HFT_2021221.Logic
         public Series GetNvidiaGeneration(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public IEnumerable<Series> MinerCounter()
+        {
+            
         }
 
         public Series Read(int id)
