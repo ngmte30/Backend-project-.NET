@@ -34,20 +34,24 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
 
         // POST api/<AmdController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] GraphicCard value)
         {
+            gLogic.Create(value);
         }
 
         // PUT api/<AmdController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] GraphicCard value)
         {
+            gLogic.Update(value);
         }
 
         // DELETE api/<AmdController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(GraphicCard gpu)
         {
+            gLogic.Update(gpu);
+
         }
     }
 }

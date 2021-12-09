@@ -35,14 +35,16 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
 
         // POST api/<SeriesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Series value)
         {
+            sLogic.Create(value);
         }
 
         // PUT api/<SeriesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Series value)
         {
+            sLogic.Update(value);
         }
 
         // DELETE api/<SeriesController>/5

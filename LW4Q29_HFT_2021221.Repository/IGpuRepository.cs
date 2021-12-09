@@ -13,6 +13,6 @@ namespace LW4Q29_HFT_2021221.Repository
         void Delete(int id);
         IQueryable<GraphicCard> GetAll();
         GraphicCard Read(int id);
-        void Update(GraphicCard car);
+        void Update(GraphicCard gpu);
     }
 }

@@ -25,12 +25,12 @@ namespace LW4Q29_HFT_2021221.Logic
 
         public void Create(GraphicCard gpu)
         {
-            throw new NotImplementedException();
+            gpuRepo.Create(gpu);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            gpuRepo.Delete(id);
         }
 
         public IQueryable<GraphicCard> GetAllGpus()
@@ -47,19 +47,19 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public void Read()
+        public void Read(int id)
         {
-            throw new NotImplementedException();
+            gpuRepo.Read(id);
         }
 
         public void ReadAll()
         {
-            
+            gpuRepo.GetAll();
         }
 
-        public void Update()
+        public void Update(GraphicCard gpu)
         {
-            throw new NotImplementedException();
+            gpuRepo.Update(gpu);
         }
     }
 }

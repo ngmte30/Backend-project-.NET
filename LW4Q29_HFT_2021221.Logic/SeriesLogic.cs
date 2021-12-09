@@ -21,14 +21,14 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public void Create(Series amd)
+        public void Create(Series ser)
         {
-            throw new NotImplementedException();
+            serRepo.Create(ser);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            serRepo.Delete(id);
         }
 
         public IQueryable<Series> GetAll()
@@ -45,14 +45,14 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public void Read()
+        public void Read(int id)
         {
-            throw new NotImplementedException();
+            serRepo.Read(id);
         }
 
-        public void Update()
+        public void Update(Series ser)
         {
-            throw new NotImplementedException();
+            serRepo.Update(ser);
         }
     }
 

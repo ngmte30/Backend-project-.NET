@@ -40,22 +40,22 @@ namespace LW4Q29_HFT_2021221.Logic
 
         public void Create(Generation gen)
         {
-            throw new NotImplementedException();
+            genRepo.Create(gen);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            genRepo.Delete(id);
         }
 
-        public void Read()
+        public void Read(int id)
         {
-            throw new NotImplementedException();
+            genRepo.Read(id);
         }
 
-        public void Update()
+        public void Update(Generation gen)
         {
-            throw new NotImplementedException();
+            genRepo.Update(gen);
         }
 
         public object AvgGraphiccardPrice()
