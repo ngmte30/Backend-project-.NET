@@ -17,7 +17,7 @@ namespace LW4Q29_HFT_2021221.Test
            //GenerationLogic g = new GenerationLogic();
         }
         [TestCase]
-        public void TestMethod1()
+        public void TestMethod1() 
         {
             
         }
