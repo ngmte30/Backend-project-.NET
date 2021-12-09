@@ -12,5 +12,10 @@ namespace LW4Q29_HFT_2021221.Logic
         Nvidia GetNvidiaById(int id);
         void ChangeNvidiaTitle(int id, string newTitle);
         IList<Nvidia> GetAllNvidias();
+
+        void Create(Amd amd);
+        void Delete(int id);
+        void Read();
+        void Update();
     }
 }

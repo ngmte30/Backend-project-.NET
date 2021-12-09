@@ -23,6 +23,16 @@ namespace LW4Q29_HFT_2021221.Logic
 
         }
 
+        public void Create(Amd amd)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<GraphicCards> GetAllGpus()
         {
             throw new NotImplementedException();
@@ -33,6 +43,21 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
         public GraphicCards GetGpuGeneration(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Read()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ReadAll()
+        {
+            
+        }
+
+        public void Update()
         {
             throw new NotImplementedException();
         }

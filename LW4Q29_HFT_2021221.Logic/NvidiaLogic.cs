@@ -21,6 +21,16 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
+        public void Create(Amd amd)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IList<Nvidia> GetAllNvidias()
         {
             throw new NotImplementedException();
@@ -34,9 +44,16 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             throw new NotImplementedException();
         }
-        
 
+        public void Read()
+        {
+            throw new NotImplementedException();
+        }
 
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

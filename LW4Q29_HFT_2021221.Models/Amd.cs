@@ -18,6 +18,8 @@ namespace LW4Q29_HFT_2021221.Models
         public string Brand { get; set; }
         public int Generation { get; set; }
 
+        public int Price { get; set; }
+
         public virtual GraphicCards graphic_card { get; set; }
     }
 }

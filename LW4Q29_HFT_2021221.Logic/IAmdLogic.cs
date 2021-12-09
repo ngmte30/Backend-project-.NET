@@ -12,5 +12,13 @@ namespace LW4Q29_HFT_2021221.Logic
         Amd GetAmdId(int id);
         void ChangeAmdTitle(int id, string newTitle);
         IList<Amd> GetAllAmd();
+
+        object AvgGraphiccardPrice();
+
+        void Create(Amd amd);
+        void Delete(int id);
+        void Read();
+        void Update();
+       
     }
 }
