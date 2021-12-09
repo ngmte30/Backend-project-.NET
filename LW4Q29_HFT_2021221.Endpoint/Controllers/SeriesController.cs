@@ -44,7 +44,7 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Series value)
         {
-            sLogic.Update(value);
+            sLogic.Update(value); 
         }
 
         // DELETE api/<SeriesController>/5
