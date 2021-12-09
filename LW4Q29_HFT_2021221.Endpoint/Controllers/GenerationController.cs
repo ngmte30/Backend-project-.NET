@@ -53,5 +53,26 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
         {
             gLogic.Delete(id);
         }
+        public void CheapestLHR()
+        {
+             gLogic.CheapestLHR();
+        }
+        public void CheapSamsung()
+        {
+             gLogic.CheapestSamsungRam();
+        }
+        public void HynixAndLhr()
+        {
+             gLogic.HynixAndLhr();
+        }
+        public void AvgPrice()
+        {
+            gLogic.AvgPrice();
+        }
+        public void ChangeGen(int id,string ng)
+        {
+            gLogic.ChangeGen(id,ng);
+        }
+
     }
 }

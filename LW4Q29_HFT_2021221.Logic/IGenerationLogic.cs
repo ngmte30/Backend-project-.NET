@@ -10,7 +10,7 @@ namespace LW4Q29_HFT_2021221.Logic
     public interface IGenerationLogic
     {
         Generation GetId(int id);
-        void ChangeGen(int id, string newTitle);
+        void ChangeGen(int id,string newGen);
         IEnumerable<Generation> GetAll();
 
         object AvgGraphiccardPrice();

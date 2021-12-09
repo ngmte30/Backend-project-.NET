@@ -16,7 +16,7 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             this.genRepo = repo;
         }
-        public void ChangeGen(int id, string newTitle)
+        public void ChangeGen(int id,string newGen)
         {
             throw new NotImplementedException();
         }
@@ -59,6 +59,31 @@ namespace LW4Q29_HFT_2021221.Logic
         }
 
         public object AvgGraphiccardPrice()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Generation> AvgPrice()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Generation> CheapestLHR()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Generation> SamsungMemory()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Generation> HynixAndLhr()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Generation> CheapestSamsungRam()
         {
             throw new NotImplementedException();
         }
