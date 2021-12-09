@@ -18,32 +18,36 @@ namespace LW4Q29_HFT_2021221.Repository
         
         public void Create(Generation generation)
         {
-            db.nvidias.Add(generation);
+            db.Add(generation);
             db.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            var nvidiaToDelete = Read(id);
-            db.nvidias.Remove(nvidiaToDelete);
+            var generationToDelete = Read(id);
+            db.Remove(generationToDelete);
             db.SaveChanges();
         }
 
         public IQueryable<Generation> GetAll()
         {
-            return db.;
+            return db.generations;
         }
 
-        public Nvidia Read(int id)
+        public Generation Read(int id)
         {
-            return db.nvidias.FirstOrDefault(t => t.nvidia_cardId == id);
+            return db.generations.FirstOrDefault(t => t.Id == id);
         }
 
-        public void Update(Nvidia nvidia)
+        public void Update(Generation newGen)
         {
-            var nvidiaToUpdate = Read(nvidia.nvidia_cardId);
-            nvidiaToUpdate.Brand = nvidia.Brand;
-            nvidiaToUpdate.Generation = nvidia.Generation;
+            var genToUpdate = Read(newGen.Id);
+            genToUpdate.Name = newGen.Name;
+            genToUpdate.Price = newGen.Price;
+            genToUpdate.MemoryType = newGen.MemoryType;
+            genToUpdate.LHR = newGen.LHR;
+            genToUpdate.SeriesID = newGen.SeriesID;
+            
             db.SaveChanges();
         }
     }

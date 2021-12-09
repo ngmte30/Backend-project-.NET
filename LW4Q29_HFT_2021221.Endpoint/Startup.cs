@@ -20,8 +20,8 @@ namespace LW4Q29_HFT_2021221.Endpoint
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddTransient<IAmdLogic, AmdLogic>();
-            services.AddTransient<INvidiaLogic, NvidiaLogic>();
+            services.AddTransient<IGenerationLogic, GenerationLogic>();
+            services.AddTransient<ISeriesLogic, SeriesLogic>();
             services.AddTransient<IGraphicCardLogic, GraphicCardLogic>();
 
             services.AddTransient<ISeriesRepository, SeriesRepository>();

@@ -8,20 +8,20 @@ using LW4Q29_HFT_2021221.Repository;
 
 namespace LW4Q29_HFT_2021221.Logic
 {
-    public class NvidiaLogic : INvidiaLogic
+    public class SeriesLogic : ISeriesLogic
     {
-        INvidiaRepository nvidiaRepo;
+        ISeriesRepository serRepo;
 
-        public NvidiaLogic(INvidiaRepository repo)
+        public SeriesLogic(ISeriesRepository repo)
         {
-            this.nvidiaRepo = repo;
+            this.serRepo = repo;
         }
         public void ChangeNvidiaTitle(int id, string newTitle)
         {
             throw new NotImplementedException();
         }
 
-        public void Create(Amd amd)
+        public void Create(Series amd)
         {
             throw new NotImplementedException();
         }
@@ -31,16 +31,16 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public IList<Nvidia> GetAllNvidias()
+        public IList<Series> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public Nvidia GetNvidiaById(int id)
+        public Series GetNvidiaById(int id)
         {
             throw new NotImplementedException();
         }
-        public Nvidia GetNvidiaGeneration(int id)
+        public Series GetNvidiaGeneration(int id)
         {
             throw new NotImplementedException();
         }

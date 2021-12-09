@@ -7,15 +7,18 @@ using LW4Q29_HFT_2021221.Models;
 
 namespace LW4Q29_HFT_2021221.Logic
 {
-    public interface INvidiaLogic
+    public interface IGenerationLogic
     {
-        Nvidia GetNvidiaById(int id);
-        void ChangeNvidiaTitle(int id, string newTitle);
-        IList<Nvidia> GetAllNvidias();
+        Generation GetId(int id);
+        void ChangeGen(int id, string newTitle);
+        IEnumerable<Generation> GetAll();
 
-        void Create(Amd amd);
+        object AvgGraphiccardPrice();
+
+        void Create(Generation amd);
         void Delete(int id);
         void Read();
         void Update();
+       
     }
 }

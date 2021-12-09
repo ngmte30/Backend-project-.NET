@@ -23,7 +23,7 @@ namespace LW4Q29_HFT_2021221.Logic
 
         }
 
-        public void Create(Amd amd)
+        public void Create(GraphicCard gpu)
         {
             throw new NotImplementedException();
         }

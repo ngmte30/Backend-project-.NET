@@ -8,29 +8,29 @@ using LW4Q29_HFT_2021221.Repository;
 
 namespace LW4Q29_HFT_2021221.Logic
 {
-    public class AmdLogic : IAmdLogic
+    public class GenerationLogic : IGenerationLogic
     {
-        ISeriesRepository amdRepo;
+        IGenerationRepository genRepo;
 
-        public AmdLogic(ISeriesRepository repo)
+        public GenerationLogic(IGenerationRepository repo)
         {
-            this.amdRepo = repo;
+            this.genRepo = repo;
         }
-        public void ChangeAmdTitle(int id, string newTitle)
+        public void ChangeGen(int id, string newTitle)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Amd> GetAllAmd()
+        public IEnumerable<Generation> GetAll()
         {
-            return amdRepo.GetAll();
+            return genRepo.GetAll();
         }
 
-        public Amd GetAmdId(int id)
+        public Generation GetId(int id)
         {
             throw new NotImplementedException();
         }
-        public Amd GetAmdGeneration(int id)
+        public Generation GetGeneration(int id)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +38,7 @@ namespace LW4Q29_HFT_2021221.Logic
 
         //CRUD METHODS---------------
 
-        public void Create(Amd amd)
+        public void Create(Generation gen)
         {
             throw new NotImplementedException();
         }
@@ -60,14 +60,19 @@ namespace LW4Q29_HFT_2021221.Logic
 
         public object AvgGraphiccardPrice()
         {
-            return from x in amdRepo.GetAll()
-                   group x by x.graphic_card.Amds into h
-                   select new
-                   {
-                       GpuAmd = h.Key,
-                       GpuAvgPrice = h.Average(z => z.Price)
-                   };
+            throw new NotImplementedException();
         }
+
+        //public object AvgGraphiccardPrice()
+        //{
+        //    return from x in genRepo.GetAll()
+        //           group x by xAmds into h
+        //           select new
+        //           {
+        //               GpuAmd = h.Key,
+        //               GpuAvgPrice = h.Average(z => z.Price)
+        //           };
+        //}
         //public IEnumerable<KeyValuePair<string, double>> BrandAvgPrice()
         //{
         //    return from x in amdRepo.GetAll()
@@ -75,7 +80,7 @@ namespace LW4Q29_HFT_2021221.Logic
         //           select new KeyValuePair<string, double>
         //           (h.Key.,h.Average(t => t.Price));
         //    return null;
-        
+
         //public IEnumerable<Amd> DesignerCard()
         //{
         //    return null;
@@ -83,10 +88,10 @@ namespace LW4Q29_HFT_2021221.Logic
         //    //       where x.Usability == "Designer"
         //    //       select new
         //    //       {
-                       
+
 
         //    //       };
-                 
+
         //}
     }
 }

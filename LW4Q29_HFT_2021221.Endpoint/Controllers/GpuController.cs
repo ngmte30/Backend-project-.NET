@@ -14,8 +14,8 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
     [ApiController]
     public class AmdController : ControllerBase
     {
-        IAmdLogic gLogic;
-        public AmdController(IAmdLogic gLogic)
+        IGraphicCardLogic gLogic;
+        public AmdController(IGraphicCardLogic gLogic)
         {
             this.gLogic = gLogic;
         }
@@ -23,7 +23,7 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
         [HttpGet]
         public IEnumerable<GraphicCard> Get()
         {
-            return gLogic.GetAllAmd();
+            return gLogic.GetAllGpus();
         }
         // GET api/<AmdController>/5
         [HttpGet("{id}")]
