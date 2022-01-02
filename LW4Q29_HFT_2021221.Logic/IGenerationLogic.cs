@@ -21,10 +21,8 @@ namespace LW4Q29_HFT_2021221.Logic
         void Update(Generation gen);
 
         IEnumerable<Generation> AvgPrice();
-        IEnumerable<Generation> CheapestLHR();
-        IEnumerable<Generation> SamsungMemory();
-        IEnumerable<Generation> HynixAndLhr();
-        IEnumerable<Generation> CheapestSamsungRam();
+        IEnumerable<KeyValuePair<string, int>> CheapestLHR();
+
 
 
        

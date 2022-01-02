@@ -11,8 +11,6 @@ namespace LW4Q29_HFT_2021221.Logic
 {
     public interface IGraphicCardLogic
     {
-        GraphicCard GetGpuById(int id);
-        void ChangeGpuTitle(int id, string newTitle);
         IQueryable<GraphicCard> GetAllGpus();
         void Create(GraphicCard gpu);
         void Delete(int id);
@@ -22,9 +20,7 @@ namespace LW4Q29_HFT_2021221.Logic
 
         IEnumerable<GraphicCard> AmdCards();
         IEnumerable<GraphicCard> NvidiaCards();
-        IEnumerable<GraphicCard> AmdEmployees();
-        IEnumerable<GraphicCard> NvidiaeEmployees();
-        IEnumerable<GraphicCard> HighestCards();
+       
         
 
 

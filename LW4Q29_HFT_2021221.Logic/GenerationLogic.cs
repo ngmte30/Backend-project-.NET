@@ -68,55 +68,18 @@ namespace LW4Q29_HFT_2021221.Logic
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Generation> CheapestLHR()
+        public IEnumerable<KeyValuePair<string, int>> CheapestLHR()
         {
-            throw new NotImplementedException();
+            var chLhr = from x in genRepo.GetAll()
+                        where x.LHR == true
+                        orderby x.Price
+                        select new KeyValuePair<string, int>(x.Name, x.Price);
+            return chLhr;
+
         }
 
-        public IEnumerable<Generation> SamsungMemory()
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public IEnumerable<Generation> HynixAndLhr()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Generation> CheapestSamsungRam()
-        {
-            throw new NotImplementedException();
-        }
-
-        //public object AvgGraphiccardPrice()
-        //{
-        //    return from x in genRepo.GetAll()
-        //           group x by xAmds into h
-        //           select new
-        //           {
-        //               GpuAmd = h.Key,
-        //               GpuAvgPrice = h.Average(z => z.Price)
-        //           };
-        //}
-        //public IEnumerable<KeyValuePair<string, double>> BrandAvgPrice()
-        //{
-        //    return from x in amdRepo.GetAll()
-        //           group x by x.aminto h
-        //           select new KeyValuePair<string, double>
-        //           (h.Key.,h.Average(t => t.Price));
-        //    return null;
-
-        //public IEnumerable<Amd> DesignerCard()
-        //{
-        //    return null;
-        //    //return from x in amdRepo.GetAll()
-        //    //       where x.Usability == "Designer"
-        //    //       select new
-        //    //       {
-
-
-        //    //       };
-
-        //}
+        
     }
 }

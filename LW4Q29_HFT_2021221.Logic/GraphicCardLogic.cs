@@ -22,17 +22,6 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             throw new NotImplementedException();
         }
-
-        public IEnumerable<GraphicCard> AmdEmployees()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ChangeGpuTitle(int id, string newTitle)
-        {
-
-        }
-
         public void Create(GraphicCard gpu)
         {
             gpuRepo.Create(gpu);
@@ -47,27 +36,7 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             return gpuRepo.GetAll();
         }
-
-        public GraphicCard GetGpuById(int id)
-        {
-            throw new NotImplementedException();
-        }
-        public GraphicCard GetGpuGeneration(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<GraphicCard> HighestCards()
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<GraphicCard> NvidiaCards()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<GraphicCard> NvidiaeEmployees()
         {
             throw new NotImplementedException();
         }

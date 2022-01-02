@@ -32,16 +32,6 @@ namespace LW4Q29_HFT_2021221.Logic
         {
            return serRepo.GetAll();
         }
-
-        public Series GetNvidiaById(int id)
-        {
-            throw new NotImplementedException();
-        }
-        public Series GetNvidiaGeneration(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<Series> MinerCounter()
         {
             return from Series x in serRepo.GetAll()
@@ -49,29 +39,9 @@ namespace LW4Q29_HFT_2021221.Logic
                    select x;
         }
 
-        public IEnumerable<Series> NameLessThanFive()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Series> NameLongerThanFive()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Series> NonMinerCounter()
-        {
-            throw new NotImplementedException();
-        }
-
         public Series Read(int id)
         {
             return serRepo.Read(id);
-        }
-
-        public IEnumerable<Series> TopSeries()
-        {
-            throw new NotImplementedException();
         }
 
         public void Update(Series ser)
