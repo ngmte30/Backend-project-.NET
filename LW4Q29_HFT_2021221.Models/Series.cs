@@ -25,5 +25,10 @@ namespace LW4Q29_HFT_2021221.Models
         public string Name { get; set; }
         public bool isMiner { get; set; }
 
+        public override string ToString()
+        {
+            return Name;
+        }
     }
+    
 }

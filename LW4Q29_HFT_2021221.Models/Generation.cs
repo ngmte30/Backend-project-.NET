@@ -25,5 +25,9 @@ namespace LW4Q29_HFT_2021221.Models
         public int Price { get; set; }
         public bool LHR { get; set; }
         public string MemoryType { get; set; }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

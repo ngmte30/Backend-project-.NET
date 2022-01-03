@@ -53,15 +53,7 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
             gLogic.Update(gpu);
 
         }
-        public void AmdCards(int id)
-        {
-            gLogic.AmdCards();
-        }
-        [HttpGet("{id}")]
-        public void NvidiaCards(int id)
-        {
-            gLogic.NvidiaCards();
-        }
+      
         
         
     }

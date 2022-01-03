@@ -53,19 +53,7 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
         {
             gLogic.Delete(id);
         }
-        public void CheapestLHR()
-        {
-             gLogic.CheapestLHR();
-        }
         
-        public void AvgPrice()
-        {
-            gLogic.AvgPrice();
-        }
-        public void ChangeGen(int id,string ng)
-        {
-            gLogic.ChangeGen(id,ng);
-        }
 
     }
 }

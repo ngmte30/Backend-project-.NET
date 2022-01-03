@@ -13,6 +13,7 @@ namespace LW4Q29_HFT_2021221.Logic
     {
         IGpuRepository gpuRepo;
 
+
         public GraphicCardLogic(IGpuRepository repo)
         {
             this.gpuRepo = repo;
@@ -42,14 +43,13 @@ namespace LW4Q29_HFT_2021221.Logic
             gpuRepo.Update(gpu);
         }
 
-        //--NON CRUD
-        public IEnumerable<GraphicCard> NvidiaCards()
+        public IEnumerable<int> AmdGpus()
         {
-            throw new NotImplementedException();
-        }
-        public IEnumerable<GraphicCard> AmdCards()
-        {
-            throw new NotImplementedException();
+            var am1 = from gpu in gpuRepo.GetAll().ToList()
+                      where gpu.Id == 1
+                      select gpu.Employees;
+            
+            return am1;
         }
     }
 }

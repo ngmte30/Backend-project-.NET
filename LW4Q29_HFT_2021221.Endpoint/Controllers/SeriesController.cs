@@ -53,11 +53,7 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
         {
             sLogic.Delete(id);
         }
-        [HttpGet("{id}")]
-        public void isMiner()
-        {
-            sLogic.MinerCounter();
-        }
+   
       
     }
 }

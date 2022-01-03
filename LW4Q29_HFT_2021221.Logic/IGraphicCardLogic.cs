@@ -17,12 +17,10 @@ namespace LW4Q29_HFT_2021221.Logic
         GraphicCard Read(int id);
         void Update(GraphicCard gpu);
         void ReadAll();
+        IEnumerable<int> AmdGpus();
 
-        //--NON CRUD
-        IEnumerable<GraphicCard> AmdCards();
-        IEnumerable<GraphicCard> NvidiaCards();
-       
-        
+
+
 
 
     }

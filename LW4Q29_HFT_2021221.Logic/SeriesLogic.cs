@@ -13,9 +13,11 @@ namespace LW4Q29_HFT_2021221.Logic
         ISeriesRepository serRepo;
         IGenerationRepository genRepo;
         IGpuRepository gpuRepo;
-        public SeriesLogic(ISeriesRepository repo)
+        public SeriesLogic(ISeriesRepository repo,IGenerationRepository genRep,IGpuRepository gpuRep)
         {
             this.serRepo = repo;
+            this.genRepo = genRep;
+            this.gpuRepo = gpuRep;
         }
         public void Create(Series ser)
         {
@@ -29,12 +31,6 @@ namespace LW4Q29_HFT_2021221.Logic
         {
            return serRepo.GetAll();
         }
-
-        public IEnumerable<Series> MinerCounter()
-        {
-            throw new NotImplementedException();
-        }
-
         public Series Read(int id)
         {
             return serRepo.Read(id);
@@ -46,6 +42,13 @@ namespace LW4Q29_HFT_2021221.Logic
 
 
         //NON CRUD 
-        
+        public IEnumerable<string> SeriesName()
+        {
+
+            var sNames = from series in serRepo.GetAll().ToList()
+                        select series.Name;
+
+            return sNames;
+        }
     }
 }

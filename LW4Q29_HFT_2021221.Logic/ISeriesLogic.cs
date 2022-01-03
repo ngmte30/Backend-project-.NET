@@ -9,12 +9,13 @@ namespace LW4Q29_HFT_2021221.Logic
 {
     public interface ISeriesLogic
     {
-        IEnumerable<Series> MinerCounter();
         IQueryable<Series> GetAll();
 
         void Create(Series sr);
         void Delete(int sr);
         Series Read(int id);
         void Update(Series sr);
+        IEnumerable<string> SeriesName();
+        
     }
 }

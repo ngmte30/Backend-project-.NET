@@ -13,7 +13,6 @@ namespace LW4Q29_HFT_2021221.Logic
         void ChangeGen(int id,string newGen);
         IEnumerable<Generation> GetAll();
 
-        object AvgGraphiccardPrice();
 
         void Create(Generation amd);
         void Delete(int id);
@@ -22,12 +21,12 @@ namespace LW4Q29_HFT_2021221.Logic
 
 
         //---NON CRUD 2
-        IEnumerable<Generation> AvgPrice();
-        IEnumerable<KeyValuePair<string, int>> CheapestLHR();
+        IEnumerable<KeyValuePair<string, int>> CheapestLHRSeries();
         IEnumerable<KeyValuePair<string, int>> HugeGpuFactory();
         IEnumerable<KeyValuePair<string, int>> NvidiaGpus();
         IEnumerable<KeyValuePair<string, int>> MinerCard();
         IEnumerable<KeyValuePair<string, int>> NvidiaSamsungRam();
+        IEnumerable<string> Expensive();
 
 
 

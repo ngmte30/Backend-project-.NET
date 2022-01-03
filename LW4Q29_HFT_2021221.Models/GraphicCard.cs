@@ -19,7 +19,10 @@ namespace LW4Q29_HFT_2021221.Models
         public virtual ICollection<Series> Serieses { get; set; }
         public string Name { get; set; }
         public int Employees { get; set; }
-        
-   
+        public override string ToString()
+        {
+            return Name;
+        }
+
     }
 }
