@@ -18,6 +18,7 @@ namespace LW4Q29_HFT_2021221.Logic
         void Update(GraphicCard gpu);
         void ReadAll();
 
+        //--NON CRUD
         IEnumerable<GraphicCard> AmdCards();
         IEnumerable<GraphicCard> NvidiaCards();
        

@@ -17,44 +17,39 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             this.gpuRepo = repo;
         }
-
-        public IEnumerable<GraphicCard> AmdCards()
-        {
-            throw new NotImplementedException();
-        }
         public void Create(GraphicCard gpu)
         {
             gpuRepo.Create(gpu);
         }
-
         public void Delete(int id)
         {
             gpuRepo.Delete(id);
         }
-
         public IQueryable<GraphicCard> GetAllGpus()
         {
             return gpuRepo.GetAll();
         }
-        public IEnumerable<GraphicCard> NvidiaCards()
-        {
-            throw new NotImplementedException();
-        }
-
         public GraphicCard Read(int id)
         {
             return gpuRepo.Read(id);
         }
-
         public void ReadAll()
         {
             gpuRepo.GetAll();
         }
-
         public void Update(GraphicCard gpu)
         {
             gpuRepo.Update(gpu);
         }
-        
+
+        //--NON CRUD
+        public IEnumerable<GraphicCard> NvidiaCards()
+        {
+            throw new NotImplementedException();
+        }
+        public IEnumerable<GraphicCard> AmdCards()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

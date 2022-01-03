@@ -62,20 +62,7 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
         {
             gLogic.NvidiaCards();
         }
-        [HttpGet("{id}")]
-        public void Highest(int id)
-        {
-            gLogic.HighestCards();
-        }
-        [HttpGet("{id}")]
-        public void nEmploy(int id)
-        {
-            gLogic.NvidiaeEmployees();
-        }
-        [HttpGet("{id}")]
-        public void AmdEmploy(int id)
-        {
-            gLogic.AmdEmployees();
-        }
+        
+        
     }
 }

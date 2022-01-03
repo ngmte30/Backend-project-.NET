@@ -11,10 +11,15 @@ namespace LW4Q29_HFT_2021221.Logic
     public class GenerationLogic : IGenerationLogic
     {
         IGenerationRepository genRepo;
+        IGpuRepository gpuRepo;
+        ISeriesRepository serRepo;
 
-        public GenerationLogic(IGenerationRepository repo)
+        public GenerationLogic(IGenerationRepository repo,IGpuRepository grepo,ISeriesRepository srepo)
         {
             this.genRepo = repo;
+            this.gpuRepo = grepo;
+            this.serRepo = srepo;
+
         }
         public void ChangeGen(int id,string newGen)
         {
@@ -30,10 +35,7 @@ namespace LW4Q29_HFT_2021221.Logic
         {
             throw new NotImplementedException();
         }
-        public Generation GetGeneration(int id)
-        {
-            throw new NotImplementedException();
-        }
+      
 
 
         //CRUD METHODS---------------
@@ -78,8 +80,50 @@ namespace LW4Q29_HFT_2021221.Logic
 
         }
 
-        
+        public IEnumerable<KeyValuePair<string, int>> HugeGpuFactory()
+        {
+            var q1 = from gpu in gpuRepo.GetAll().ToList()
+                     join ser in serRepo.GetAll().ToList() on gpu.Id equals ser.GraphicCardID
+                     join gen in genRepo.GetAll().ToList() on ser.Id equals gen.SeriesID
+                     where gpu.Employees > 500
+                     select new KeyValuePair<string, int> (gen.Name,gen.Id);
 
-        
+            return q1;
+        }
+        public IEnumerable<KeyValuePair<string, int>> NvidiaGpus()
+        {
+            var q1 = from gpu in gpuRepo.GetAll().ToList()
+                     join ser in serRepo.GetAll().ToList() on gpu.Id equals ser.GraphicCardID
+                     join gen in genRepo.GetAll().ToList() on ser.Id equals gen.SeriesID
+                     where gpu.Name == "NVIDIA"
+                     select new KeyValuePair<string, int>(gen.Name, gen.Id);
+
+
+            return q1;
+        }
+        public IEnumerable<KeyValuePair<string, int>> MinerCard()
+        {
+            var q1 = from gpu in gpuRepo.GetAll().ToList()
+                     join ser in serRepo.GetAll().ToList() on gpu.Id equals ser.GraphicCardID
+                     join gen in genRepo.GetAll().ToList() on ser.Id equals gen.SeriesID
+                     where ser.isMiner == true
+                     select new KeyValuePair<string, int>(gen.Name, gen.Id);
+
+            return q1;
+        }
+
+        public IEnumerable<KeyValuePair<string, int>> NvidiaSamsungRam()
+        {
+            var q1 = from gpu in gpuRepo.GetAll().ToList()
+                     join ser in serRepo.GetAll().ToList() on gpu.Id equals ser.GraphicCardID
+                     join gen in genRepo.GetAll().ToList() on ser.Id equals gen.SeriesID
+                     where gen.MemoryType == "Samsung"                   
+                     where gpu.Name=="NVIDIA"
+                     select new KeyValuePair<string, int>(gen.Name, gen.Id);
+
+            return q1;
+        }
+
+
     }
 }

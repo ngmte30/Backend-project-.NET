@@ -57,14 +57,7 @@ namespace LW4Q29_HFT_2021221.Endpoint.Controllers
         {
              gLogic.CheapestLHR();
         }
-        public void CheapSamsung()
-        {
-             gLogic.CheapestSamsungRam();
-        }
-        public void HynixAndLhr()
-        {
-             gLogic.HynixAndLhr();
-        }
+        
         public void AvgPrice()
         {
             gLogic.AvgPrice();

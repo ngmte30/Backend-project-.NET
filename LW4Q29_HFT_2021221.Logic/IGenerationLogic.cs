@@ -20,11 +20,18 @@ namespace LW4Q29_HFT_2021221.Logic
         Generation Read(int id);
         void Update(Generation gen);
 
+
+        //---NON CRUD 2
         IEnumerable<Generation> AvgPrice();
         IEnumerable<KeyValuePair<string, int>> CheapestLHR();
+        IEnumerable<KeyValuePair<string, int>> HugeGpuFactory();
+        IEnumerable<KeyValuePair<string, int>> NvidiaGpus();
+        IEnumerable<KeyValuePair<string, int>> MinerCard();
+        IEnumerable<KeyValuePair<string, int>> NvidiaSamsungRam();
 
 
 
-       
+
+
     }
 }
